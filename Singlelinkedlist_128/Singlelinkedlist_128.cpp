@@ -89,4 +89,21 @@ bool listEmpty() {
 		return false;
 }
 
-
+void treaverse() {
+	if (listEmpty()) {
+		cout << "list Kosong" << endl;
+		system("paus");
+		system(cls);
+		return;
+	}
+	else{
+	
+		Node* currentNode = START;
+		while (currentNode != NULL) {
+			cout << "NIM: " << currentNode->noMhs << ", Nama:" << currentNode->name << endl;
+			currentNode = currentNode->next;
+		}
+		
+	}
+	
+}

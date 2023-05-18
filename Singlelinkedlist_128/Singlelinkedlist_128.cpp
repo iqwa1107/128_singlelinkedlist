@@ -180,7 +180,7 @@ int main() {
 				searchData();
 				break;
 			case 5:
-				break
+				break;
 			default:
 				cout << "Terjadi kesalahan" << endl;
 			}

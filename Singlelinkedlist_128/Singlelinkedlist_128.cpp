@@ -163,6 +163,26 @@ int main() {
 					break;
 				}
 				int nim;
+				cout << "masukan NIM: ";
+				cin >> nim;
+				if (deletNode(nim)){
+					cout << "nim: " << nim << " berhasil di hapus" << endl;
+					system("pause");
+					system("cls");
+				}
+				else
+					cout << "data tidak ditemukan" << endl;
+				break;
+			case 3:
+				treaverse();
+				break;
+			case 4:
+				searchData();
+				break;
+			case 5:
+				break
+			default:
+				cout << "Terjadi kesalahan" << endl;
 			}
 		}
 		

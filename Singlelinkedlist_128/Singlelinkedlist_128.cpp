@@ -72,3 +72,13 @@ bool seracNode(int nim, Node* current, Node* previous) {
 		return false;
 	}
 }
+bool deletNode(int nim) {
+	Node* current = START;
+	Node* previous = START;
+	if (seracNode(nim, previous, current) == false)
+		return false;
+	previous->next = current->next;
+	if (current == START)
+		START = current->next;
+	return true;
+}

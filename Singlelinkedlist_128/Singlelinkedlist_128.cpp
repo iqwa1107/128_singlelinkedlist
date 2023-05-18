@@ -26,8 +26,8 @@ void addNode() {
 			cout << "NIM sudah ada" << endl;
 			return;
 		}
-		
-		
+
+
 		nodeBaru->next = START;
 		START = nodeBaru;
 		return;
@@ -36,9 +36,9 @@ void addNode() {
 	Node* previous = START;
 	Node* current = START;
 
-	while ((current !=NULL) && (nim >= current->noMhs))
+	while ((current != NULL) && (nim >= current->noMhs))
 	{
-		if (nim == current ->noMhs)
+		if (nim == current->noMhs)
 		{
 			cout << "NIM sudah ada" << endl;
 			return;
@@ -53,17 +53,17 @@ void addNode() {
 bool seracNode(int nim, Node* current, Node* previous) {
 	previous = START;
 	current = START;
-	while (current != NULL && nim > current-> noMhs)
+	while (current != NULL && nim > current->noMhs)
 	{
 		previous = current;
 		current = current->next;
 	}
-	
+
 	if (current == NULL)
 	{
 		return false;
 	}
-	else if (current->noMhs ==nim)
+	else if (current->noMhs == nim)
 	{
 		return true;
 	}
@@ -93,17 +93,41 @@ void treaverse() {
 	if (listEmpty()) {
 		cout << "list Kosong" << endl;
 		system("paus");
-		system(cls);
+		system("cls");
 		return;
 	}
-	else{
-	
+	else {
+
 		Node* currentNode = START;
 		while (currentNode != NULL) {
 			cout << "NIM: " << currentNode->noMhs << ", Nama:" << currentNode->name << endl;
 			currentNode = currentNode->next;
 		}
-		
+
 	}
-	
+
+}
+void searchData() {
+	if (listEmpty()) {
+		cout << "List Kosong" << endl;
+		system("pause");
+		system("cls");
+		return;
+	}
+	else {
+		int nim;
+		cout << "Masukan NIM: ";
+		cin >> nim;
+		Node* currentNode = START;
+		while (currentNode != NULL) {
+			if (currentNode->noMhs == nim) {
+				cout << "NIM: " << currentNode->noMhs << ",Nama:" << currentNode->name << endl;
+				return;
+			}
+			currentNode = currentNode->next;
+		
+
+		}
+		cout << "Data tidak di temukan" << endl;
+	}
 }

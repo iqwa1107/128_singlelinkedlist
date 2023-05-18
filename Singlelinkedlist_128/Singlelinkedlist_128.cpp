@@ -184,7 +184,13 @@ int main() {
 			default:
 				cout << "Terjadi kesalahan" << endl;
 			}
+
 		}
 		
+		catch (exception e)
+		{
+			cout << "Terjadi kesalahan" << endl;
+		}
+
 	} 
 }
